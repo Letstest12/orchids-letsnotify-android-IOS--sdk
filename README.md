@@ -67,3 +67,33 @@ Add the `letsnotify-ios-sdk` as a dependency in your Xcode project or `Package.s
 ## 📄 License
 
 © 2026 LetsNotify. All rights reserved.
+
+---
+
+## 🔄 Updating & Releasing
+
+To update the SDKs and push new versions to your customers:
+
+### 1. Update the Code
+Modify the source code in `letsnotify-sdk/` (Android) or `letsnotify-ios-sdk/` (iOS).
+
+### 2. Versioning & Releasing
+
+#### **For Android (via JitPack)**
+1. **Update Version**: Increment the `version` string in `letsnotify-sdk/build.gradle`.
+2. **Push to GitHub**: Commit and push your changes.
+3. **Create Release**: Draft a new release on GitHub with a version tag (e.g., `v1.0.1`). JitPack will automatically pick up the new tag.
+
+#### **For iOS (via Swift Package Manager)**
+1. **Commit Changes**: Ensure all iOS code changes are committed and pushed.
+2. **Tag the Version**: Run:
+   ```bash
+   git tag v1.0.1
+   git push origin v1.0.1
+   ```
+
+### 3. Customer Update
+Customers should update their dependency version:
+- **Android**: `implementation 'com.github.YourUsername:letsnotify-android-sdk:1.0.1'`
+- **iOS**: Update the package version in Xcode to the new tag.
+
